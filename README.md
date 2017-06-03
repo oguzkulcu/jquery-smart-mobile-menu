@@ -38,7 +38,7 @@ Aşağıda `js` dosyalarınızı `body` etiketinin önüne eklemelisiniz.
 
 <br>
 
-[Örnek sayfaya ve canlı önizlemeye gitmek için tıklayın.](https://oguzkulcu.github.io/smart-mobile-menu/example.html)
+[Örnek sayfaya ve canlı önizlemeye gitmek için tıklayın.](https://oguzkulcu.github.io/jquery-smart-mobile-menu/example.html)
 
 **Örnek kod İçeriği:**
 
@@ -229,7 +229,7 @@ ul.smobilemenu-theme-temaadi li a > i {
 <br><br><br>
 ## Detaylı Örnek Kodlar
 
-[Canlı örneğe gitmek için tıklayın.](https://oguzkulcu.github.io/smart-mobile-menu/example.html)
+[Canlı örneğe gitmek için tıklayın.](https://oguzkulcu.github.io/jquery-smart-mobile-menu/example.html)
 
 
 ```html
