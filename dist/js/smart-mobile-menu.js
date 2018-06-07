@@ -1,6 +1,6 @@
 /***
  * @author Oguzhan Külcü - grafikcoder@gmail.com - oguzhankulcu.com
- * @version 1.0.0
+ * @version 1.1.0
  * http://oguzkulcu.github.io/smart-mobile-menu/
  */
 (function ($) {
@@ -85,3 +85,18 @@
     };
 
 })(jQuery);
+
+// version: 1.1.0
+$('[data-smart-menu]').each(function () {
+   var selector = $(this).data('smart-menu');
+   var theme = $(this).data('smart-menu-theme');
+   var dropdown = $(this).data('smart-menu-dropdown');
+   var active = $(this).data('smart-menu-active-auto');
+
+    $(selector).smobileMenu({
+        dropdown: dropdown !== null && dropdown !== undefined ? dropdown : true,
+        getMenu: $(this),
+        theme: theme !== null && theme !== undefined ? theme : 'default',
+        activeAutoOpen: active !== null && active !== undefined ? active : true,
+    });
+});

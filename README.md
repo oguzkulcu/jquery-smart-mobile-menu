@@ -7,6 +7,10 @@ smart-mobile-menu eklentisi sayesinde dinamik ve hazır menülerinizi otomatik b
 **Dikkat: Eklenti, sitenizde belirttiğiniz menünüzden `ul li` yapısını otomatik çekip, mobil menüye aktarır. Ekstra içerik girmenize gerek yoktur.**
 
 
+## Version 1.1.0
+* Menü elementinin niteliğiyle eklenti artık kullanılabiliyor.
+* Yeni Nitelikler: `data-smart-menu="#open_mobile_menu"` `data-smart-menu-active-auto="true"`  `data-smart-menu-dropdown="true"` `data-smart-menu-theme="default"`
+* Bu nitelikleri kullandığınızda `$('#open_mobile_menu').smobileMenu({getMenu: '#menu'});` bu koda gerek kalmayacaktır.
 
 ## Kullanımı
 ***
@@ -37,6 +41,70 @@ Aşağıda `js` dosyalarınızı `body` etiketinin önüne eklemelisiniz.
 ```
 
 <br>
+
+## JavaScript kodu kullanmadan HTML ile otomatik olarak kullanabilirsiniz
+[Örnek sayfaya ve canlı önizlemeye gitmek için tıklayın.](https://oguzkulcu.github.io/jquery-smart-mobile-menu/example-2.html)
+
+**Örnek kod İçeriği:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example</title>
+    <link rel="stylesheet" href="dist/css/smart-mobile-menu.css">
+    <link rel="stylesheet" href="dist/css/smm-theme-default.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div>
+    <ul id="menu" data-smart-menu="#open_mobile_menu" data-smart-menu-active-auto="true"  data-smart-menu-dropdown="true" data-smart-menu-theme="default">
+        <li><a href="#">Menü 1</a></li>
+        <li class='test' data-smm-hidden="true"><a href="#">Menü 2</a></li>
+        <li>
+            <a href="#">Menü 3</a>
+            <ul>
+                <li><a href="#">Test 1</a></li>
+                <li><a class="smm-active" href="#">Test 2</a></li>
+                <li>
+                    <a href="#">Test 3</a>
+                    <ul>
+                        <li><a href="#">Test 1</a></li>
+                        <li><a href="#">Test 2</a></li>
+                        <li>
+                            <a href="#">Test 3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menü 4</a>
+            <ul data-smm-dropdown="false">
+                <li><a href="#">Test 1</a></li>
+                <li><a href="#">Test 2</a></li>
+                <li><a href="#">Test 3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<button id="open_mobile_menu" type="button">Open Menu</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="dist/js/smart-mobile-menu.js"></script>
+</body>
+</html>
+```
+ <br><br><br><br>
+ 
+
+## jQuery seçisi ile kullanma
 
 [Örnek sayfaya ve canlı önizlemeye gitmek için tıklayın.](https://oguzkulcu.github.io/jquery-smart-mobile-menu/example.html)
 
